@@ -9,6 +9,10 @@ LABEL "homepage"="https://github.com/nerdify"
 LABEL "maintainer"="Hosmel Quintana <hosmel@getnerdify.com>"
 LABEL "repository"="https://github.com/nerdify/ping-action"
 
+ARG PING_URL=secrets
+
+RUN echo $PING_URL
+
 RUN apk add --no-cache curl
 
 ADD entrypoint.sh /entrypoint.sh
