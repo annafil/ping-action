@@ -13,7 +13,7 @@ ARG SECRETS
 
 RUN apk add --no-cache curl
 
-RUN echo $SECRETS
+RUN echo "$SECRETS"
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
