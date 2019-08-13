@@ -15,7 +15,7 @@ jobs:
     
     steps:
     - name: Deploy Changes
-      uses: annafil/ping-action@1.1
+      uses: annafil/ping-action@1.2
       with:
         entrypoint: /entrypoint.sh
         args: https://yoururl.com
