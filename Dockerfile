@@ -9,13 +9,7 @@ LABEL "homepage"="https://github.com/annafil/ping-action"
 LABEL "maintainer"="<annafil@github.com>"
 LABEL "repository"="https://github.com/annafil/ping-action"
 
-# see https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepswith
-
 RUN apk add --no-cache curl
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-
-RUN echo $INPUT_PING_URL
-
-#ENTRYPOINT ["/entrypoint.sh"] 
