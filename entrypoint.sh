@@ -2,4 +2,4 @@
 
 set -eu
 
-curl $SECRETS
+curl $1
