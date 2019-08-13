@@ -2,4 +2,4 @@
 
 set -eu
 
-curl $PING_URL
+curl $SECRETS
