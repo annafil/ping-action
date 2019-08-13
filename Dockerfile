@@ -11,11 +11,13 @@ LABEL "repository"="https://github.com/annafil/ping-action"
 
 ARG ping_url
 
+ENV url_to_ping=$ping_url
+
 RUN apk add --no-cache curl
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-RUN echo $ping_url
+RUN echo $url_to_ping
 
-ENTRYPOINT ["/entrypoint.sh", $ping_url] 
+ENTRYPOINT ["/entrypoint.sh"] 
