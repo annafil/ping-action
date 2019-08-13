@@ -16,4 +16,6 @@ RUN apk add --no-cache curl
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
+RUN echo $ping_url
+
 ENTRYPOINT ["/entrypoint.sh", "$ping_url"] 
