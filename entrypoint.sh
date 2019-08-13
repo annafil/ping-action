@@ -2,4 +2,4 @@
 
 set -eu
 
-curl $1
+curl $url_to_ping
