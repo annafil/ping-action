@@ -9,6 +9,7 @@ LABEL "homepage"="https://github.com/annafil/ping-action"
 LABEL "maintainer"="<annafil@github.com>"
 LABEL "repository"="https://github.com/annafil/ping-action"
 
+# see https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepswith
 ARG INPUT_PING_URL
 
 ENV url_to_ping=$INPUT_PING_URL
