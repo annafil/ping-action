@@ -1,21 +1,22 @@
 # Ping Action
 
-> GitHub Action for ping a URL
+> GitHub Action to ping a URL
 
 ## Usage
 
-```workflow
-workflow "Deploy" {
-  on = "push"
-  resolves = ["deploy"]
-}
-
-action "deploy" {
-  uses = "nerdify/ping-action@1.0.0"
-  secrets = ["PING_URL"]
-}
 ```
+name: Deploy
 
-## Secrets
+on: [pull_request]
 
-* `PING_URL` - **Required**. The URL to ping.
+jobs:
+  deploy_changes: 
+    runs-on: ubuntu-18.04
+    
+    steps:
+    - name: Deploy Changes
+      uses: annafil/ping-action@1.0.10
+      with:
+        entrypoint: /entrypoint.sh
+        args: https://yoururl.com
+```
