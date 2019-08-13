@@ -18,4 +18,4 @@ RUN chmod +x /entrypoint.sh
 
 RUN echo $ping_url
 
-ENTRYPOINT ["/entrypoint.sh", "$ping_url"] 
+ENTRYPOINT ["/entrypoint.sh", $ping_url] 
