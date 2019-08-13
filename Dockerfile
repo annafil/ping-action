@@ -9,9 +9,9 @@ LABEL "homepage"="https://github.com/annafil/ping-action"
 LABEL "maintainer"="<annafil@github.com>"
 LABEL "repository"="https://github.com/annafil/ping-action"
 
-ARG ping_url
+ARG INPUT_PING_URL
 
-ENV url_to_ping=$ping_url
+ENV url_to_ping=$INPUT_PING_URL
 
 RUN apk add --no-cache curl
 
